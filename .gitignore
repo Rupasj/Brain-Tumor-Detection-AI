@@ -2,10 +2,12 @@
 __pycache__/
 *.pyc
 
-# Models (BIG FILES)
-models/
+# Ignore only large/unwanted models
 *.h5
-*.keras
+
+# Allow specific model file
+!models/
+!models/brain_tumor_model.keras
 
 # Environment
 venv/
@@ -17,3 +19,4 @@ Thumbs.db
 
 # Outputs
 outputs/
+data/
