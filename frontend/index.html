@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NeuroVision AI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="logo">NeuroVision AI</div>
+    <button onclick="toggleTheme()">🌙</button>
+  </div>
+
+  <!-- CARD -->
+  <div class="card">
+
+    <h1>Brain Tumor Detection</h1>
+    <p class="subtitle">AI-powered MRI analysis</p>
+
+    <!-- UPLOAD -->
+    <div class="upload-area" onclick="triggerUpload()" id="dropArea">
+      <p>Drag & Drop MRI Image or Click</p>
+      <input type="file" id="fileInput" accept="image/*" hidden>
+    </div>
+
+    <!-- PREVIEW -->
+    <img id="preview" />
+
+    <!-- BUTTON -->
+    <button onclick="analyzeImage()" class="primary-btn">
+      Analyze Image
+    </button>
+
+    <!-- LOADER -->
+    <div id="loader" class="loader"></div>
+
+    <!-- RESULT -->
+    <h2 id="result"></h2>
+
+    <!-- PROGRESS -->
+    <div class="progress-bar">
+      <div id="fill"></div>
+    </div>
+
+    <p id="confidenceText"></p>
+
+    <!-- GRAPH -->
+    <canvas id="chart"></canvas>
+
+    <!-- HEATMAP -->
+    <h3>Model Attention</h3>
+    <div class="heatmap-container">
+      <img id="heatmap">
+    </div>
+
+    <!-- INSIGHTS -->
+    <div id="insights" class="insights"></div>
+
+    <!-- ========================= -->
+    <!-- 🔥 NEW: REPORT SECTION -->
+    <!-- ========================= -->
+
+    <h3 style="margin-top:30px;">Patient Report</h3>
+
+    <!-- Patient Name -->
+    <input 
+      type="text" 
+      id="patientName" 
+      placeholder="Enter Patient Name" 
+      class="input"
+    >
+
+    <!-- Doctor Notes -->
+    <textarea 
+      id="doctorNotes" 
+      placeholder="Doctor Notes (optional)" 
+      class="textarea"
+    ></textarea>
+
+    <!-- Download Button -->
+    <button 
+      onclick="downloadReport()" 
+      class="primary-btn" 
+      id="downloadBtn" 
+      disabled
+    >
+      Download PDF Report
+    </button>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Models (BIG FILES)
+models/
+*.h5
+*.keras
+
+# Environment
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Outputs
+outputs/
